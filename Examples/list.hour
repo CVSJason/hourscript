@@ -1,0 +1,13 @@
+myList = [1, 2, 3];
+
+myList.push(4);
+myList.pop(1);
+
+println(myList);
+println(myList.length);
+println(myList[0], myList[1], myList[2], myList[3]);
+
+myList.insert('awa', 0);
+myList[2] = 'qwq';
+
+println(myList);

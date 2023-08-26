@@ -1,0 +1,34 @@
+class Animal in
+    local name;
+
+    func init(name)
+        this.name = name;
+    end;
+
+    func makeSound()
+        println('- Slient -');
+    end;
+end;
+
+class Dog: Animal in
+    func init()
+        base.init('Dog');
+    end;
+
+    func makeSound()
+        println('Woof!');
+    end;
+end;
+
+class WoodenDuck: Animal in
+    func init()
+        base.init('Wooden Duck');
+    end;
+end;
+
+dog = Dog();
+println(dog.name);
+dog.makeSound();
+duck = WoodenDuck();
+println(duck.name);
+duck.makeSound();

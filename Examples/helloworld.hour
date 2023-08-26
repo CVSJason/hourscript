@@ -1,0 +1,16 @@
+a = 1;
+
+func fn1()
+    a = 2;
+end;
+
+func fn2()
+    local a;
+    a = 3;
+end;
+
+println(a);
+fn1();
+println(a);
+fn2();
+println(a);

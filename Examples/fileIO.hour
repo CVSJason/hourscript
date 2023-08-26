@@ -1,0 +1,6 @@
+file = open('/Users/cvsjason/Desktop/hello.txt', 'r+');
+
+file.truncate();
+file.write('Hello, world!');
+
+file.close();

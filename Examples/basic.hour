@@ -1,0 +1,13 @@
+i = 0;
+
+while i < 10 do
+    if i == 3 then 
+        i += 1;
+        continue;
+    end;
+    if i == 7 then break; end;
+
+    println(i);
+
+    i += 1;
+end;

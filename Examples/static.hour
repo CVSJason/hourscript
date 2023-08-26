@@ -1,0 +1,12 @@
+func a()
+    static awa = 0;
+
+    awa += 1;
+end;
+
+println(a());
+println(a());
+println(a());
+println(a());
+println(a());
+println(a());

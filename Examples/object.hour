@@ -1,0 +1,15 @@
+class MyClass in
+    local name;
+
+    func init(name)
+        this.name = name;
+    end;
+
+    func greet()
+        println("Hello, " .. name .. "!");
+    end;
+end;
+
+
+myObject = MyClass('world');
+myObject.greet();

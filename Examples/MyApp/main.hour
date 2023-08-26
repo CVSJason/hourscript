@@ -1,0 +1,4 @@
+import module1;
+import module2;
+
+module1.greet(module2.myName);
