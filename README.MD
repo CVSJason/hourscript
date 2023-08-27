@@ -7,7 +7,7 @@ Hourscript has some main features as follow:
 - File I/O
 - Object oriental programming features
 
-I've spent 7 hours and 40 minutes on this project.
+I've spent 7 hours and 55 minutes on this project.
 
 ## To build...
 Run `dotnet bulid`. (Just that easy)

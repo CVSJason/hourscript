@@ -64,11 +64,11 @@ public class ThreadObject: Value
         return name switch {
             "start" => new NativeCallable((_, a) => {
                 thread.Start();
-                return VoidValue.value;
+                return this;
             }, 0),
             "join" => new NativeCallable((_, a) => {
                 thread.Join();
-                return VoidValue.value;
+                return this;
             }, 0),
             //"state" => new DoubleValue((int)thread.ThreadState),
             _ => base.GetProperty(name)
