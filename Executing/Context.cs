@@ -1,6 +1,7 @@
 namespace HourScript.Executing;
 
 using HourScript.Modules.FileIO;
+using HourScript.Modules.Threading;
 
 public class Context
 {
@@ -57,6 +58,17 @@ public class Context
             return new StringValue(value);
         }, 0));
 
+        builtInScope.AddVariable("sleep", new NativeCallable((ctxt, p) => {
+            double seconds = p[0].ToDouble();
+
+            if (double.IsNormal(seconds))
+            {
+                Thread.Sleep((int)(seconds * 1000));
+            }
+
+            return VoidValue.value;
+        }, 1));
+
         builtInScope.AddVariable("open", new NativeCallable((ctxt, p) => {
             return new FileObject(p[0].ToString());
         }, 1));
@@ -64,6 +76,7 @@ public class Context
         builtInScope.AddVariable("NaN", new DoubleValue(double.NaN));
         builtInScope.AddVariable("nil", NilValue.value);
         builtInScope.AddVariable("void", VoidValue.value);
+        builtInScope.AddVariable("Thread", new ThreadClass());
     }
 
     public Context()
